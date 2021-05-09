@@ -78,5 +78,18 @@ class Dataset(object):
 - 通过重载<pre>def __getitem__(self, index):</pre>data.Dataset父类方法，获取数据集中数据内容<br>
 - 通过重载<pre>def __add__(self, other):</pre>data.Dataset父类方法，获取数据集的大小<br>
 
-## 卷积神经网络
+## 辣鸡os.listdir函数，毁我青春
+用listdir来遍历某个文件夹每个文件获取文件名时，不是按文件夹中文件排列的顺序来的，它是按照某一种特定的顺序
+<pre>
+for file in os.listdir(dir):
+    list_img.append(dir + file)  
+</pre>
+此时，
+此时如果
+<pre>
+print(list_img)
+</pre>
+会发现不是你想象中的顺序
+
+    
 
