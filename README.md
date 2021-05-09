@@ -1,4 +1,29 @@
 # kaggle-Dogs-vs-Cats
+## 谷歌colab使用
+### 网址 ：
+https://colab.research.google.com
+### 使用方法：
+- 第一步
+<pre>
+from google.colab import drive
+drive.mount('/content/drive')
+</pre>
+之后会验证谷歌账号并复制粘贴验证码
+#### 作用：
+colab获取云盘权限，因为代码、数据集等都是存在谷歌云盘中的<br>
+#### 之后会显示,说明已经成功让colab获取云盘权限
+<pre>
+Mounted at /content/drive
+</pre>
+- 第二步
+<pre>
+import os
+os.chdir("/content/drive/My Drive/Colab Notebooks")
+</pre>
+#### 作用：
+改变当前工作目录到指定的路径，也就是改变当前工作目录到云盘中存jupyter notebook的路径<br>
+一般都是这个路径，理论上来说是不用改的<br>
+
 ## 对GPU和CPU的调用
 <pre>
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
