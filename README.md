@@ -33,5 +33,5 @@ class Dataset(object):
     def __add__(self, other):
         return ConcatDataset([self, other])
 </pre>
-通过重载<pre>def __getitem__(self, index):</pre>data.Dataset父类方法，获取数据集中数据内容<br>
-通过重载<pre>def __add__(self, other):</pre>data.Dataset父类方法，获取数据集的大小<br>
+- 通过重载<pre>def __getitem__(self, index):</pre>data.Dataset父类方法，获取数据集中数据内容<br>
+- 通过重载<pre>def __add__(self, other):</pre>data.Dataset父类方法，获取数据集的大小<br>
