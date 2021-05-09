@@ -84,12 +84,15 @@ class Dataset(object):
 for file in os.listdir(dir):
     list_img.append(dir + file)  
 </pre>
-此时，
 此时如果
 <pre>
 print(list_img)
 </pre>
 会发现不是你想象中的顺序
+可以用和下面代码类似的方法进行排序，就没有问题了,具体详见代码
+<pre>
+list_img.sort(key=lambda x: int(x[20:-4]))
+</pre>
 
     
 
