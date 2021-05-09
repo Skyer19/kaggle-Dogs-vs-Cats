@@ -36,6 +36,12 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = Net()          # 实例化一个网络
 model = model.to(device)  
 </pre>
+## 解压文件
+<pre>
+! unzip ./dog_vs_cats/test1.zip 
+! unzip ./dog_vs_cats/train.zip 
+</pre>
+文件会被解压到相同目录的同名文件夹中
 ## 遇到的问题
 ### 图片的大小不一致
 输入到cnn网络进行训练的图片要求图片大小一致，而训练集中的图片大小不一致🤭<br>
