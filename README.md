@@ -3,6 +3,15 @@
 ## 遇到的问题
 ### 图片的大小不一致
 输入到cnn网络进行训练的图片要求图片大小一致，而训练集中的图片大小不一致🤭
+解决办法：
+<pre>
+from PIL import Image
+
+IMAGE_H = 200
+IMAGE_W = 200
+img = Image.open("图片路径")                       # 打开图片
+img = img.resize((IMAGE_H, IMAGE_W))                        # 将图片resize成统一大小
+</pre>
 
 ## torch.utils.data.Dataset类
 <pre>
