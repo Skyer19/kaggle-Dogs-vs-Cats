@@ -93,6 +93,19 @@ print(list_img)
 <pre>
 list_img.sort(key=lambda x: int(x[20:-4]))
 </pre>
-
-    
+## 与csv有关
+### 向csv中写入
+<pre>
+f = open("./dog_vs_cats/sampleSubmission.csv","w",encoding="utf-8",newline="")  # 好像貌似只能有一句这个
+csv_writer = csv.writer(f)
+csv_writer.writerow(["id","label"])
+</pre>
+### 读取一个csv的文件
+<pre>
+r = []
+with open("./dog_vs_cats/sampleSubmission.csv",encoding = 'utf-8') as text:
+    row = csv.reader(text, delimiter = ',')
+    for r in row:
+        print(r)
+</pre>
 
